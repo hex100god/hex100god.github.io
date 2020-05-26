@@ -65,7 +65,7 @@ position: relative;
 width: 100%;
 min-height: 100vh;
 padding: 100px;
-background: url(Images/bg.jpg);
+background: url(bg.jpg);
 background-size: cover;
 display: flex;
 align-items: center;

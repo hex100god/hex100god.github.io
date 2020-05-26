@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Images/favicon.ico" />
+    <title>Sourabh Singh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <section class="banner" id="sec">
+            <header>
+                <a href="#" class="logo">HEX</a>
+                <div id="toggle" onclick="toggle()"></div>
+                </header>
+                <div class="content">
+                    <h2>
+                        Hello World,<br>I'm <span>Sourabh Singh</span>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore officia ut consequuntur libero illum facilis consectetur rerum voluptatibus ipsa, similique, voluptate beatae dolorem doloremque! Dolorem soluta cumque eos quos.</p>
+                    <a href="#">Know More</a>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/Hex.100GOD"><img src="Images/facebook.png"></a></li>
+                    <li><a href="https://www.twitter.com/hex100god"><img src="Images/twitter.png"></a></li>
+                    <li><a href="https://www.linkedin.com/in/sourabh-singh-163490140"><img src="Images/linkedin.png"></a></li>
+                    <li><a href="https://www.github.com/hex100god"><img src="Images/github.png"></a></li>
+                    <li><a href="mailto:hex100god@gmail.com"><img src="Images/gmail.png"></a></li>
+                </ul>
+        </section>
+        <div id="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById('sec');
+            var nav = document.getElementById('navigation');
+            sec.classList.toggle('active')
+            nav.classList.toggle('active')
+                     }
+        </script>
+    </body>
+</html>

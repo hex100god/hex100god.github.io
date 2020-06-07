@@ -3,8 +3,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
+/*.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height:150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content:'';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: 0.5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}*/
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url('tenor.gif')
+	 no-repeat center center;	
+	z-index: 99999;
+}
+
 header{
     position: absolute;
     top: 0;
@@ -25,6 +72,19 @@ header a{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
+}
+header a:hover{
+    position: relative;
+    font-weight: 700;
+    color: #40c3ff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 1s;
+}
+.rotate{
+    transition: 2s;
 }
 header #toggle{
 position: relative;
@@ -65,7 +125,7 @@ position: relative;
 width: 100%;
 min-height: 100vh;
 padding: 100px;
-background: url(bg.jpg);
+background: url(bg2.jpg);
 background-size: cover;
 display: flex;
 align-items: center;
@@ -106,6 +166,13 @@ z-index: 2;
     font-weight: 600;
     text-transform: uppercase;
 }
+#navigation ul li a:hover{
+    color: #222;
+    font-weight: 650;
+    font-size: 2.1em;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
 .content{
     max-width: 600px;
 }
@@ -125,15 +192,23 @@ font-size:1.2em
 .content a{
     position: relative;
     display: inline-block;
-    margin-top: 20px;
-    background: #fff;
-    color: #000;
     padding: 10px 30px;
+    margin-top: 20px;
+    /*background: #ff4d00;*/
+    background: linear-gradient(90deg, #03a9f4, #40c3ff, #0072b1, #03a9f4);
+    color: #fff;
     text-decoration: none;
-    text-transform: initial;
-    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
     font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    background-size: 400%;
 }
+.content a:hover{
+    animation: animate 8s linear infinite;
+    }
 .sci{
     position: absolute;
     display: flex;
@@ -153,13 +228,38 @@ font-size:1.2em
     border: 1px solid #fff;
     margin: 10px 0 0;
 }
-.sci li a:hover{
+.sci .facebooki a:hover{
+    background: #4267B2 
+}
+.sci .twitteri a:hover{
+    background: #00acee;
+}
+.sci .linkedini a:hover{
+    background: #0072b1;
+}
+.sci .gmaili a:hover{
+    background: #c71610;
+}
+.sci .githubi a:hover{
     background: #fff;
 }
 .sci li a img{
     max-width: 20px;
     filter: invert(1);
+    /*mix-blend-mode: difference;*/
+}
+.sci .githubi a img{
+    max-width: 20px;
+    filter: invert(1);
     mix-blend-mode: difference;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
 }
 @media(max-width: 825px)
 {
@@ -194,5 +294,75 @@ font-size:1.2em
     .sci li a{
         margin: initial;
         margin-right: 10px;
+    }
+}
+@media(max-width: 325px)
+{
+    header{
+        padding: 20px 50px;
+    }
+    .banner{
+        padding: 100px 50px 150px;
+    }
+    .banner h2{
+        font-size: 1.6em;
+    }
+    .banner .content p, .banner .content a{
+        font-size: 0.9em;
+    }
+    .banner.active{
+        transform: translateX(-200px);
+        }
+    #navigation{
+        width: 200px;
+    }
+    #navigation ul li a{
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+    .sci{
+        position: absolute;
+        bottom: 50px;  
+        right: initial;
+        flex-direction: row;
+    }
+    .sci li a{
+        margin: initial;
+        margin-right: 2px;
+    }
+}
+@media(max-width: 315px)
+{
+    header{
+        padding: 15x 35px;
+    }
+    .banner{
+        padding: 100px 50px 150px;
+    }
+    .banner h2{
+        font-size: 1.2em;
+    }
+    .banner .content p, .banner .content a{
+        font-size: 0.7em;
+    }
+    .banner.active{
+        transform: translateX(-120px);
+        }
+    #navigation{
+        width: 120px;
+    }
+    #navigation ul li a{
+        font-size: 1.1em;
+        margin: 5px 0;
+    }
+    .sci{
+        position: absolute;
+        bottom: 50px;  
+        right: initial;
+        flex-direction: row;
+    }
+    .sci li a{
+        margin: initial;
+        margin-right: 1px;
     }
 }

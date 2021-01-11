@@ -243,6 +243,9 @@ font-size:1.2em
 .sci .githubi a:hover{
     background: #fff;
 }
+.sci .resumei a:hover{
+    background: ##F5F5DC;
+}
 .sci li a img{
     max-width: 20px;
     filter: invert(1);
